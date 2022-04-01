@@ -31,7 +31,7 @@ public class Main {
 			int b = sc.nextInt();
 			int c = sc.nextInt();
 			graph.get(a).add(new Edge(b,c));
-			graph.get(b).add(new Edge(a,c)); // ¹æÇâÀÌ ¾ø±â ¶§¹®
+			graph.get(b).add(new Edge(a,c)); // Â¹Ã¦Ã‡Ã¢Ã€ÃŒ Â¾Ã¸Â±Ã¢ Â¶Â§Â¹Â®
 			
 		}
 		int[] ch = new int[V+1];
