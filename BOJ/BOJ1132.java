@@ -5,26 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-//BOJ #1132 ÇÕ
-/*
-class sumAlpha{
-	char Char;
-	long sum;
-	public sumAlpha (char Char, long sum) {
-		this.Char = Char;
-		this.sum = sum;
-	}
-}
-*/
+//BOJ #1132 Ã‡Ã•
+
 public class Main {
 	public static long solution(HashMap<Character, Long> mapCnt, ArrayList<Character> first) {
 		long answer = 0;
-		/*
-		ArrayList<sumAlpha> listSum = new ArrayList<>();
-		for(char x : mapCnt.keySet()) {
-			listSum.add(new sumAlpha(x, mapCnt.get(x)));
-		}
-		*/
 		
 		for(int i = 9 ; i >= 0 ; i --) {
 			if(mapCnt.isEmpty()) break;
@@ -54,32 +39,7 @@ public class Main {
 				mapCnt.remove(maxKey);
 				answer += maxVal * i;
 			}
-			/*
-			if(listSum.isEmpty()) break;
-			else if(first.size() == i) {
-				sumAlpha tmp = listSum.get(0);
-				for(int k = 1 ; k < listSum.size() ; i ++) {
-					if(tmp.sum < listSum.get(k).sum && ) {
-						tmp = listSum.get(k);
-						listSum.remove(k);
-					}
-				}
-			}
-			else {
-				sumAlpha tmp = listSum.get(0);
-				for(int k = 1 ; k < listSum.size() ; i ++) {
-					if(tmp.sum < listSum.get(k).sum) {
-						tmp = listSum.get(k);
-						listSum.remove(k);
-					}
-				}
-				
-				for(char x : first) {
-					if(tmp.Char == x) first.remove(first.indexOf(tmp.Char));
-				}
-			}
-			answer += tmp.sum * i;
-			*/
+		
 		}
 		return answer;
 	}
@@ -95,7 +55,7 @@ public class Main {
 			long cnt = 1;
 			for(int k = tmp.length() - 1 ; k  >= 0 ; k --) {
 				if(k == 0) {
-					boolean flag = false; // ÀÖÀ¸¸é true;
+					boolean flag = false; // Ã€Ã–Ã€Â¸Â¸Ã© true;
 					for(char x : first) {
 						if(x == tmp.charAt(k)) flag = true;
 					}
