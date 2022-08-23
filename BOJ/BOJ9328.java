@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-// BOJ #9328 ¿­¼è
+// BOJ #9328 ì—´ì‡ 
 class Point{
 	int x;
 	int y;
@@ -20,7 +20,7 @@ class Point{
 public class Main {
 
 	static HashSet<Character> key ;
-	static HashMap<Character, ArrayList<Point>> hm; // À§Ä¡ ÀúÀå
+	static HashMap<Character, ArrayList<Point>> hm; // ìœ„ì¹˜ ì €ì¥
 	static boolean[][] ch;
 	static char[][] map;
 	static Queue<Point> Q = new LinkedList<>();
@@ -37,7 +37,7 @@ public class Main {
 			if(xx < 0 || yy < 0 || xx >= w  || yy >= h) continue;
 			if(map[yy][xx] == '*' || ch[yy][xx]) continue;
 			if(Character.isAlphabetic(map[yy][xx])) {
-				//¼Ò¹®ÀÚ
+				//ì†Œë¬¸ì
 				if(Character.isLowerCase(map[yy][xx])) {
 					if(!key.contains(map[yy][xx])) {
 						if(hm.containsKey(Character.toUpperCase(map[yy][xx]))) {
@@ -45,15 +45,15 @@ public class Main {
 								Q.offer(p);
 							}
 						}
-						key.add(map[0][i]);
+						key.add(map[yy][xx]);
 					}
-					Q.offer(new Point(0, i));
+					Q.offer(new Point(yy, xx));
 				}
-				//´ë¹®ÀÚ 
+				//ëŒ€ë¬¸ì 
 				else if(Character.isUpperCase(map[yy][xx])) {
-					// ¿­¼è°¡ ÀÖÀ¸¸é
+					// ì—´ì‡ ê°€ ìˆìœ¼ë©´
 					if(key.contains(Character.toLowerCase(map[yy][xx]))) DFS(xx, yy);
-					// ¿­¼è°¡ ¾øÀ¸¸é
+					// ì—´ì‡ ê°€ ì—†ìœ¼ë©´
 					else {
 						if(!hm.containsKey(map[yy][xx])) {
 							hm.put(map[yy][xx], new ArrayList<>());
@@ -69,7 +69,7 @@ public class Main {
 	static void solution() { // BFS
 		for(int i = 0 ; i < w ; i ++) {
 			if(Character.isAlphabetic(map[0][i])) {
-				//¼Ò¹®ÀÚ
+				//ì†Œë¬¸ì
 				if(Character.isLowerCase(map[0][i])) {
 					if(!key.contains(map[0][i])) {
 						if(hm.containsKey(Character.toUpperCase(map[0][i]))) {
@@ -82,11 +82,11 @@ public class Main {
 					Q.offer(new Point(0, i));
 				}
 				
-				//´ë¹®ÀÚ 
+				//ëŒ€ë¬¸ì 
 				else if(map[0][i] <= 90 && map[0][i] >= 65) {
-					// ¿­¼è°¡ ÀÖÀ¸¸é
+					// ì—´ì‡ ê°€ ìˆìœ¼ë©´
 					if(key.contains(Character.toLowerCase(map[0][i]))) Q.offer(new Point(0, i));
-					// ¿­¼è°¡ ¾øÀ¸¸é
+					// ì—´ì‡ ê°€ ì—†ìœ¼ë©´
 					else {
 						if(!hm.containsKey(map[0][i])) {
 							hm.put(map[0][i], new ArrayList<>());
@@ -95,11 +95,11 @@ public class Main {
 					}
 				}
 			}
-			else if(map[0][i] == '.' || map[0][i] == '$') Q.offer(new Point(0, i)); //'.' ÀÏ °æ¿ì
+			else if(map[0][i] == '.' || map[0][i] == '$') Q.offer(new Point(0, i)); //'.' ì¼ ê²½ìš°
 		}
 		for(int i = 1 ; i < h - 1 ; i ++) {
 			if(Character.isAlphabetic(map[i][0])) {
-				//¼Ò¹®ÀÚ
+				//ì†Œë¬¸ì
 				if(Character.isLowerCase(map[i][0])) {
 					if(!key.contains(map[i][0])) {
 						if(hm.containsKey(Character.toUpperCase(map[i][0]))) {
@@ -111,11 +111,11 @@ public class Main {
 					}
 					Q.offer(new Point(i, 0));
 				}
-				//´ë¹®ÀÚ 
+				//ëŒ€ë¬¸ì 
 				else if(map[i][0] <= 90 && map[i][0] >= 65) {
-					// ¿­¼è°¡ ÀÖÀ¸¸é
+					// ì—´ì‡ ê°€ ìˆìœ¼ë©´
 					if(key.contains(Character.toLowerCase(map[i][0]))) Q.offer(new Point(i, 0));
-					// ¿­¼è°¡ ¾øÀ¸¸é
+					// ì—´ì‡ ê°€ ì—†ìœ¼ë©´
 					else {
 						if(!hm.containsKey(map[i][0])) {
 							hm.put(map[i][0], new ArrayList<>());
@@ -124,11 +124,11 @@ public class Main {
 					}
 				}
 			}
-			else if(map[i][0] == '.' || map[i][0] == '$') Q.offer(new Point(i, 0)); //'.' ÀÏ °æ¿ì
+			else if(map[i][0] == '.' || map[i][0] == '$') Q.offer(new Point(i, 0)); //'.' ì¼ ê²½ìš°
 		}
 		for(int i = 1 ; i < h - 1 ; i ++) {
 			if(Character.isAlphabetic(map[i][w - 1])) {
-				//¼Ò¹®ÀÚ
+				//ì†Œë¬¸ì
 				if(Character.isLowerCase(map[i][w - 1])) {
 					if(!key.contains(map[i][w - 1])) {
 						if(hm.containsKey(Character.toUpperCase(map[i][w - 1]))) {
@@ -140,11 +140,11 @@ public class Main {
 					}
 					Q.offer(new Point(i, w - 1));
 				}
-				//´ë¹®ÀÚ 
+				//ëŒ€ë¬¸ì 
 				else if(map[i][w - 1] <= 90 && map[i][w - 1] >= 65) {
-					// ¿­¼è°¡ ÀÖÀ¸¸é
+					// ì—´ì‡ ê°€ ìˆìœ¼ë©´
 					if(key.contains(Character.toLowerCase(map[i][w - 1]))) Q.offer(new Point(i, w - 1));
-					// ¿­¼è°¡ ¾øÀ¸¸é
+					// ì—´ì‡ ê°€ ì—†ìœ¼ë©´
 					else {
 						if(!hm.containsKey(map[i][w - 1])) {
 							hm.put(map[i][w - 1], new ArrayList<>());
@@ -153,11 +153,11 @@ public class Main {
 					}
 				}
 			}
-			else if(map[i][w - 1] == '.' || map[i][w - 1] == '$') Q.offer(new Point(i, w - 1)); //'.' ÀÏ °æ¿ì
+			else if(map[i][w - 1] == '.' || map[i][w - 1] == '$') Q.offer(new Point(i, w - 1)); //'.' ì¼ ê²½ìš°
 		}
 		for(int i = 0 ; i < w ; i ++) {
 			if(Character.isAlphabetic(map[h - 1][i])) {
-				//¼Ò¹®ÀÚ
+				//ì†Œë¬¸ì
 				if(Character.isLowerCase(map[h - 1][i])) {
 					if(!key.contains(map[h - 1][i])) {
 						if(hm.containsKey(Character.toUpperCase(map[h - 1][i]))) {
@@ -169,11 +169,11 @@ public class Main {
 					}
 					Q.offer(new Point(h - 1, i));
 				}
-				//´ë¹®ÀÚ 
+				//ëŒ€ë¬¸ì 
 				else if(map[h - 1][i] <= 90 && map[h - 1][i] >= 65) {
-					// ¿­¼è°¡ ÀÖÀ¸¸é
+					// ì—´ì‡ ê°€ ìˆìœ¼ë©´
 					if(key.contains(Character.toLowerCase(map[h - 1][i]))) Q.offer(new Point(h - 1, i));
-					// ¿­¼è°¡ ¾øÀ¸¸é
+					// ì—´ì‡ ê°€ ì—†ìœ¼ë©´
 					else {
 						if(!hm.containsKey(map[h - 1][i])) {
 							hm.put(map[h - 1][i], new ArrayList<>());
@@ -182,7 +182,7 @@ public class Main {
 					}
 				}
 			}
-			else if(map[h - 1][i] == '.' || map[h - 1][i] == '$') Q.offer(new Point(h - 1, i)); //'.' ÀÏ °æ¿ì
+			else if(map[h - 1][i] == '.' || map[h - 1][i] == '$') Q.offer(new Point(h - 1, i)); //'.' ì¼ ê²½ìš°
 		}
 		while(!Q.isEmpty()) {
 			Point tmp = Q.poll();
