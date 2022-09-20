@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-// BOJ #2212 ¼¾¼­
+// BOJ #2212 Â¼Â¾Â¼Â­
 public class Main {
 	
 	static int[] arr;
@@ -23,7 +23,7 @@ public class Main {
 			tmp = arr[i];
 		}
 		for(int i = 0 ; i < K - 1 ; i ++) {
-			sum -= pQ.poll();
+			if(!pQ.isEmpty()) sum -= pQ.poll();
 		}
 		return sum;
 	}
