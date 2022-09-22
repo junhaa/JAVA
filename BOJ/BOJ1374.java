@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-// BOJ #1374 °­ÀÇ½Ç
+// BOJ #1374 Â°Â­Ã€Ã‡Â½Ã‡
 class Room implements Comparable<Room>{
 	int start;
 	int end;
@@ -26,7 +26,7 @@ public class Main {
 		int tmp = 0;
 		eQ.offer(sQ.poll().end);
 		while(!sQ.isEmpty()) {
-			if(sQ.peek().start >= eQ.peek()) {
+			if(!eQ.isEmpty() && sQ.peek().start >= eQ.peek()) {
 				eQ.poll();
 				tmp ++;
 			}
