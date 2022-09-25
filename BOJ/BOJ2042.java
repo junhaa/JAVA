@@ -47,7 +47,7 @@ public class Main {
 		}
 		stree = new long[size];
 		for(int i = 0 ; i < N ; i ++) {
-			stree[size / 2 + i] = Integer.parseInt(br.readLine());
+			stree[size / 2 + i] = Long.parseLong(br.readLine());
 		}
 		T.construct();
 		int a,b;
@@ -56,7 +56,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
-			c = Integer.parseInt(st.nextToken());
+			c = Long.parseLong(st.nextToken());
 			if(a == 1) { // 바꾸기
 				T.update(b - 1, c);
 			}
