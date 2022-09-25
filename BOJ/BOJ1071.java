@@ -42,6 +42,11 @@ public class Main {
 					break;
 				}
 				else {
+					if(last + 1 == tmp1.num) {
+						answer.append(tmp2.num + " ");
+						tmp2.seq --;
+					}
+					
 					for(int i = 0 ; i < tmp1.seq ; i ++) {
 						answer.append(tmp1.num + " ");
 					}
