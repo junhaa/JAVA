@@ -26,9 +26,9 @@ public class Main {
 			}
 			if(arr[nodeNum * 2] >= val) nodeNum *= 2;
 			else {
+				val -= arr[nodeNum * 2];
 				nodeNum *= 2;
 				nodeNum += 1;
-				val -= arr[nodeNum * 2];
 			}
 		}
 	}
