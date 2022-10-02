@@ -11,7 +11,7 @@ public class Main {
 	
 	static void update(int idx, int val) {
 		idx += size / 2;
-		tree[idx] = val;
+		tree[idx] += val;
 		while(idx > 1) {
 			idx /= 2; 
 			tree[idx] = tree[idx * 2] + tree[idx * 2 + 1];
