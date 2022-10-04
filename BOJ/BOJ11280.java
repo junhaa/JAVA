@@ -73,7 +73,7 @@ public class Main {
 			if(sn[i] == 0) DFS(i);
 		}
 		for(int i = 0 ; i < N ; i ++) {
-			if(snum[i] == snum[i + 1]) {
+			if(snum[i * 2] == snum[i * 2 + 1]) {
 				System.out.println(0);
 				return;
 			}
