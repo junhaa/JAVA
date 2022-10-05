@@ -97,7 +97,7 @@ public class Main {
 			}
 			num[sn[i]] ++;
 		}
-		//dp[sn[S]] = num[sn[S]];
+		dp[sn[S]] = num[sn[S]];
 		T.topologySort(S);
 		System.out.println(dp[sn[E]]);
 	}
