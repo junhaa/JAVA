@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// BOJ #13458 시험 감
+// BOJ #13458 시험 감독
 public class Main {
 
 	public static void main(String[] args) throws IOException {
