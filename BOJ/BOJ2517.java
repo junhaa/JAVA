@@ -38,7 +38,6 @@ public class Main {
 			}
 			size *= 2;
 		}
-		size = 16;
 		tree = new int[size];
 		
 		int N = Integer.parseInt(br.readLine());
