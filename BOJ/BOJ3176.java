@@ -18,7 +18,7 @@ public class Main {
 
 	static int[][] parent, min, max;
 	static int[] depth;
-	static final int LOG = 5; // 18
+	static final int LOG = 18;
 	static ArrayList<Edge>[] list;
 	static int minD, maxD;
 	
