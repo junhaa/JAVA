@@ -49,7 +49,7 @@ public class Main {
 		for(int i = 0 ; i < N ; i ++) {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
-		int answer = 0;
+		long answer = 0;
 		for(int i = 0 ; i < N ; i ++) {
 			if(tree[1] != K) {
 				T.update(arr[i], 1);
