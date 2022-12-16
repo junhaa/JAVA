@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// BOJ #10026 적록색약
+// BOJ #10026 
 class Point{
 	int x;
 	int y;
