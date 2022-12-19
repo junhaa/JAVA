@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
 
-// BOJ #10826 ÇÇº¸³ªÄ¡ ¼ö 4
+// BOJ #10826 í”¼ë³´ë‚˜ì¹˜ ìˆ˜ 4
 public class Main {
 	static BigInteger[] dp;
 	
