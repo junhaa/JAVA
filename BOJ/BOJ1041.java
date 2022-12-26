@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// BOJ #1041 ¡÷ªÁ¿ß
+// BOJ #1041 
 public class Main {
 	public long solution(int N, int[] dice) {
 		if(N == 1) {
