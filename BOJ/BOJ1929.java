@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// BOJ #1929 ¼Ò¼ö ±¸ÇÏ±â
+// BOJ #1929 ì†Œìˆ˜ êµ¬í•˜ê¸° 
 public class Main {
 
 	static void solution(int M, int N) {
