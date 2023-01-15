@@ -28,15 +28,15 @@ public class Main {
 	static ArrayList<Query> q = new ArrayList<>();
 
 	public void add(int x) {
-		sum -= x * cnt[x] * cnt[x];
+		sum -= (long)x * cnt[x] * cnt[x];
 		cnt[x] ++;
-		sum += x * cnt[x] * cnt[x];
+		sum += (long)x * cnt[x] * cnt[x];
 	}
 	
 	public void delete(int x) {
-		sum -= x * cnt[x] * cnt[x];
+		sum -= (long)x * cnt[x] * cnt[x];
 		cnt[x] --;
-		sum += x * cnt[x] * cnt[x];
+		sum += (long)x * cnt[x] * cnt[x];
 	}
 	
 	public static void main(String[] args) throws IOException {
