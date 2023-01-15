@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
-// BOJ #A - 2023년이 기대되는 이유
+// BOJ #27231 2023년이 기대되는 이유
 public class Main {
 
 	static int[] arr;
