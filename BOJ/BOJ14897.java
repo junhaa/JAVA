@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-// BOJ #14897 서로 다른 수와 쿼리 1
+// BOJ #14897 서로 다른 수와 쿼리 1 
 class Query implements Comparable<Query>{
 	int start, end, sqrtN, num;
 	public Query(int start, int end, int sqrtN, int num) {
