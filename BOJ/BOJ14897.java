@@ -23,7 +23,7 @@ class Query implements Comparable<Query>{
 public class Main {
 	
 	static HashMap<Integer, Integer> map = new HashMap<>();
-	static int[] arr = new int[1000001], rev = new int[1000001], cnt, answer;
+	static int[] arr = new int[1000001], cnt, answer;
 	static ArrayList<Query> q = new ArrayList<>();
 	static int ansCnt = 0;
 	
@@ -138,13 +138,11 @@ public class Main {
 		int N = myIO.nextInt();
 		int sqrtN = (int)Math.sqrt(N);
 		arr = new int[N];
-		rev = new int[N];
 		int midx = 0;
 		for(int i = 0 ; i < N ; i ++) {
 			int tmp = myIO.nextInt();
 			if(!map.containsKey(tmp)) { 
 				map.put(tmp, midx ++);
-				rev[midx - 1] = tmp; 
 			}
 			arr[i] = map.get(tmp);
 		}
