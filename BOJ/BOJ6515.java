@@ -25,7 +25,7 @@ public class Main {
 
 	static int[] cnt = new int[202020], arr, cntArr, answer;
 	static int N, max;
-	static ArrayList<Query> q = new ArrayList<>();
+	static ArrayList<Query> q;
 
 	static void add(int x) {
 		if(cnt[x] > 0) cntArr[cnt[x]] --;
@@ -57,6 +57,7 @@ public class Main {
 		cntArr = new int[N + 1];
 		answer = new int[Q];
 		max = Integer.MIN_VALUE;
+		q = new ArrayList<>();
 		st = new StringTokenizer(br.readLine());
 		for(int i = 0 ; i < N ; i ++) {
 			arr[i] = Integer.parseInt(st.nextToken()) + 100000;
