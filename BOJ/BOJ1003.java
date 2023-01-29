@@ -10,7 +10,7 @@ class Count{
 		this.c1 = c1;
 	}
 }
-// BOJ #1003 ÇÇº¸³ªÄ¡ ÇÔ¼ö
+// BOJ #1003 í”¼ë³´ë‚˜ì¹˜ í•¨ìˆ˜
 public class Main {
 	static Count dp[] = new Count[41];
 
