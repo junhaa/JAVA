@@ -11,6 +11,19 @@ public class Main {
 	static ArrayList<Integer>[] tree;
 	static int size = 2;
 	
+	public static int upperBound(ArrayList<Integer> arr, int start, int end, int key) {
+		int low = start;
+		int high = end;
+
+		while (low <= high) {
+			int mid = (low + high) >> 1;
+			int midVal = arr.get(mid);
+			if(midVal > key)	high = mid - 1;
+			else	low = mid + 1;
+		}
+		return high;
+	}
+	
 	static void construct() {
 		for(int i = size / 2 - 1 ; i > 0 ; i --) {
 			ArrayList<Integer> c = tree[i], lt = tree[i * 2], rt = tree[i * 2 + 1];
@@ -24,15 +37,8 @@ public class Main {
 	static int greater(int L, int R, int nodeNum, int nodeL, int nodeR, int k) {
 		if(R < nodeL || nodeR < L) return 0;
 		if(L <= nodeL && nodeR <= R) {
-			int idx = Collections.binarySearch(tree[nodeNum], k);
-			if(idx < 0) {
-				idx ++;
-				idx *= -1;
-				return tree[nodeNum].size() - idx;
-			}
-			else {
-				return tree[nodeNum].size() - idx - 1;
-			}
+			int idx = upperBound(tree[nodeNum], 0, tree[nodeNum].size() - 1, k) + 1;
+			return tree[nodeNum].size() - idx;
 		}
 		int mid = (nodeL + nodeR) / 2;
 		return greater(L, R, nodeNum * 2, nodeL, mid, k) + greater(L, R, nodeNum * 2 + 1, mid + 1, nodeR, k);
