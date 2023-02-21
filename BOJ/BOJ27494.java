@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-// BOJ #A 2023년은 검은 토끼의 해
+// BOJ #27494 2023년은 검은 토끼의 해
 public class Main {
 
 	static int[][][] dp;
