@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-// BOJ #B 만다리트 만들기
+// BOJ #27495 만다리트 만들기
 class Goal implements Comparable<Goal>{
 	String Goal;
 	int x, y;
