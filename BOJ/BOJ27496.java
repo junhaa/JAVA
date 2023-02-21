@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-// BOJ #C - 발머의 피크 이론
+// BOJ #27496 - 발머의 피크 이론
 public class Main {
 
 	static int[] arr;
