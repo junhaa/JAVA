@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// BOJ A 
+// BOJ #27724 팝핀 소다
 public class Main {
 
 	static int solution(int n, int m, int k) {
