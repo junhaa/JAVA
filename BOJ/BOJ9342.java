@@ -1,0 +1,1 @@
+import java.util.*;public class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);StringBuilder sb=new StringBuilder();int t=Integer.parseInt(sc.next());while(t-->0) sb.append(sc.next().matches("^[A-F]?A+F+C+[A-F]?$")?"Infected!\n":"Good\n");System.out.println(sb);}}
