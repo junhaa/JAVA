@@ -43,7 +43,7 @@ public class Main {
 		}
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0 ; i < N ; i ++) {
-			if(i % 20 == 0) sb.append("\n");
+			if(i != 0 && i % 20 == 0) sb.append("\n");
 			sb.append(sw[i + 1] + " ");
 		}
 		System.out.println(sb);
