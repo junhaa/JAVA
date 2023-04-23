@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-// BOJ #1005 ACM Craft
+// BOJ #1005 ACM Craft 
 public class Main {
 	static int[] inDegree, time, sum;
 	static ArrayList<ArrayList<Integer>> list;
 	
-	static int solution(int W, int N) { // À§»ó Á¤·Ä
+	static int solution(int W, int N) { // ìœ„ìƒ ì •ë ¬
 		Queue<Integer> Q = new LinkedList<>();
 		for(int i = 1 ; i <= N ; i ++) {
 			if(inDegree[i] == 0) {
@@ -39,8 +39,8 @@ public class Main {
 		int test = Integer.parseInt(br.readLine());
 		while(test -- > 0) {
 			st = new StringTokenizer(br.readLine());
-			int N = Integer.parseInt(st.nextToken()); // °Ç¹°ÀÇ °³¼ö
-			int K = Integer.parseInt(st.nextToken()); // °Ç¼³¼ø¼­ ±ÔÄ¢ ¼ö
+			int N = Integer.parseInt(st.nextToken()); // ê±´ë¬¼ì˜ ê°œìˆ˜
+			int K = Integer.parseInt(st.nextToken()); // ê±´ì„¤ìˆœì„œ ê·œì¹™ ìˆ˜
 			inDegree = new int [N + 1];
 			list = new ArrayList<ArrayList<Integer>>();
 			time = new int[N + 1];
