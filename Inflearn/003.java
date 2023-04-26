@@ -1,6 +1,6 @@
 package codingTest_003;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class Main {
 
