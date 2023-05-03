@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -32,17 +31,12 @@ public class Main {
 				int miny = tmp.y - 2 >= 0 ? tmp.y - 2 : 0;
 				int minx = tmp.x - 2 >= 0 ? tmp.x - 2 : 0;
 				for(int j = miny ; j <= (tmp.y + 2 > top ? top : tmp.y + 2) ; j ++) {
-					ArrayList<Integer> list = new ArrayList<>();
 					for(int k = 0 ; k < node[j].size() ; k ++) {
 						if(node[j].get(k) < minx) continue;
 						if(node[j].get(k) > tmp.x + 2) break;
 						Q.offer(new Point(j, node[j].get(k)));
-						list.add(k);
-					}
-					if(!list.isEmpty()) {
-						for(int k = list.size() - 1 ; k >= 0 ; k --) {
-							node[j].remove(list.get(k));
-						}
+						node[j].remove(k);
+						k --;
 					}
 				}
 			}
