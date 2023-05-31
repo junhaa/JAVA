@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
-// 2023 아주머학교 프로그래딩 정시머힌
+// #28125 2023 아주머학교 프로그래딩 정시머힌
 public class Main {
 	
 	static HashMap<Character, Character> map = new HashMap<>();
