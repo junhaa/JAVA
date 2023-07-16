@@ -43,9 +43,7 @@ public class Main {
 			ch[i] = true;
 			int[][] tmpMap = new int[N][M];
 			for(int j = 0 ; j < N ; j ++) {
-				for(int k = 0 ; k < M ; k ++) {
-					tmpMap[j][k] = lastMap[j][k];
-				}
+				System.arraycopy(lastMap[j], 0, tmpMap[j], 0, M);
 			}
 			Query tmp = list.get(i);
 			for(int j = 0 ; j <= tmp.s ; j ++) {
