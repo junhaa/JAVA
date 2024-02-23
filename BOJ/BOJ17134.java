@@ -111,12 +111,6 @@ public class Main {
 			}
 		}
 
-		for (int i = LEN; i < size; i++) {
-			if (a[i] == 1 || b[i] == 1) {
-				System.out.println("ERROR");
-			}
-		}
-
 		a[2] = 0; // a는 홀수로 된 소수여야 함
 
 		long[] ret = multiply(a, b);
